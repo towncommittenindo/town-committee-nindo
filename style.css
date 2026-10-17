@@ -1137,3 +1137,225 @@ a:focus-visible {
     }
 }
 
+/* =========================================
+   HISTORY & CULTURE PAGE
+========================================= */
+
+.history-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(270px, 0.7fr);
+    align-items: start;
+    gap: 55px;
+}
+
+.history-intro h2,
+.records-grid h2 {
+    margin-top: 12px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.3;
+}
+
+.history-intro .heading-line,
+.records-grid .heading-line {
+    margin-bottom: 26px;
+}
+
+.history-intro p,
+.records-grid > div:first-child > p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.history-highlight {
+    padding: 32px 27px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--cream);
+}
+
+.highlight-mark {
+    display: block;
+    height: 45px;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 68px;
+    line-height: 1;
+}
+
+.history-highlight h3 {
+    margin-top: 15px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.history-highlight p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.history-highlight .text-link {
+    margin-top: 20px;
+}
+
+.culture-section {
+    background: var(--cream);
+}
+
+.culture-section .section-heading {
+    margin-bottom: 40px;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.culture-card {
+    padding: 27px 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.culture-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(212, 177, 106, 0.75);
+    border-radius: 50%;
+    color: var(--green);
+    background: #fbf8ef;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.culture-card h3 {
+    margin-top: 18px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.culture-card p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.historical-records {
+    background: var(--white);
+}
+
+.records-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 60px;
+}
+
+.records-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.record-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.record-item:first-child {
+    padding-top: 0;
+}
+
+.record-item:last-child {
+    border-bottom: 0;
+}
+
+.record-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--green);
+    background: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.record-item h3 {
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.record-item p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+    .history-intro-grid,
+    .records-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .culture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        padding: 24px 21px;
+    }
+
+    .history-highlight {
+        padding: 27px 22px;
+    }
+
+    .history-intro p,
+    .records-grid > div:first-child > p {
+        font-size: 13px;
+    }
+
+    .record-item {
+        gap: 13px;
+    }
+}
+
+
